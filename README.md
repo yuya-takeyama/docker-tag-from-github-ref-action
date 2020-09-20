@@ -16,7 +16,7 @@ To build and push Docker images, you need to use another action like [docker/bui
 steps:
   - uses: actions/checkout@v2
   - id: docker-tag
-    uses: yuya-takeyama/docker-tag-from-github-ref-action
+    uses: yuya-takeyama/docker-tag-from-github-ref-action@v1
   - name: Build and push
     uses: docker/build-push-action@v2
     with:
