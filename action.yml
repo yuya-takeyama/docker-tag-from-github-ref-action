@@ -1,11 +1,18 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Docker tag from github.ref'
+description: 'Generate Docker tag from github.ref'
+author: 'Yuya Takeyama'
 inputs:
-  milliseconds: # change this
-    required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  latest-branches:
+    required: false
+    description: 'Comma-separated names of branches to be `latest` Docker tag'
+    default: 'main,master'
+  remove-version-tag-prefix:
+    required: false
+    description: 'Remove `v` from version tag prefix'
+    default: 'true'
+outputs:
+  tag:
+    description: 'Generated Docker tag'
 runs:
   using: 'node12'
   main: 'dist/index.js'
