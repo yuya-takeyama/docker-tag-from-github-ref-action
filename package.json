@@ -1,6 +1,6 @@
 {
   "name": "@yuya-takeyama/docker-tag-from-github-ref-action",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "A GitHub Action to generate a Docker tag from github.ref",
   "main": "lib/main.js",
