@@ -1,6 +1,9 @@
 name: 'Docker tag from github.ref'
 description: 'Generate Docker tag from github.ref'
 author: 'Yuya Takeyama'
+branding:
+  icon: 'tag'
+  color: 'blue'
 inputs:
   latest-branches:
     required: false
