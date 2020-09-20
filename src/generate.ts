@@ -1,4 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { Inputs } from './inputs';
 
 const branchRefPrefix = /^refs\/heads\//;
