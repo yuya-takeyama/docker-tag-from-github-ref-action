@@ -19,6 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ./
-        with:
-          milliseconds: 1000
+      - id: docker-tag
+        uses: ./
+      - name: Print output
+        run: 'echo ${{ steps.docker-tag.outputs.tag }}'
