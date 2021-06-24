@@ -39,7 +39,7 @@ const generateForBranch = (githubRef: string, inputs: Inputs): string => {
 const generateForTag = (githubRef: string, inputs: Inputs): string => {
   const tag = githubRef.replace(tagRefPrefix, '');
 
-  if (inputs.removeVersionTagPrefix && /^v\d+\.\d+\.\d+$/.test(tag)) {
+  if (inputs.removeVersionTagPrefix && /^v\d+(\.\d+){0,2}/.test(tag)) {
     return tag.replace(/^v/, '');
   }
 
